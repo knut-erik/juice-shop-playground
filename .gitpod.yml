@@ -1,12 +1,5 @@
-image:
-  file: Dockerfile
+image: bkimminich/juice-shop
 
-tasks:
-  - name: Fetch juice shop and run it
-    init: |
-      docker pull bkimminich/juice-shop
-    command: |
-      docker run --rm -it --env "NODE_ENV=unsafe" -p 3000:3000 bkimminich/juice-shop
 
 ports:
   - name: juice-shop
@@ -14,4 +7,3 @@ ports:
     port: 3000
     visibility: private
     onOpen: open-preview
-
